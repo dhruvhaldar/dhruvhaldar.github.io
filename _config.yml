@@ -71,7 +71,7 @@ github_username: dhruvhaldar
 gitlab_username: # your GitLab user name
 x_username: # your X handle
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
-linkedin_username: # your LinkedIn user name
+linkedin_username: dhruvhaldar # your LinkedIn user name
 telegram_username: # your Telegram user name
 scholar_userid: # your Google Scholar ID
 semanticscholar_id: # your Semantic Scholar ID
@@ -104,7 +104,7 @@ zotero_username: # your zotero username
 wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  Best way to reach me is via my email.
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -112,7 +112,7 @@ contact_note: >
 
 # For Google Analytics, see https://support.google.com/analytics/answer/10447272?hl=en&ref_topic=14088998&sjid=5129943941510317771-SA#zippy=%2Cgoogle-sites
 # and follow the instructions for Google Sites. You will need to create a Google Analytics property and copy the Google tag ID.
-google_analytics: # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
+google_analytics: G-02PK1RJ8RY # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
 cronitor_analytics: # cronitor RUM analytics site ID (format: XXXXXXXXX)
 
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
@@ -123,8 +123,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: huhuhu
+blog_name: dhruv-folio # blog_name will be displayed in your blog page
+blog_description: 
 permalink: /blog/:year/:title/
 
 # Pagination
@@ -138,12 +138,12 @@ related_blog_posts:
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
 giscus:
-  repo: # <your-github-user-name>/<your-github-repo-name>
-  repo_id: # leave empty or specify your repo_id (see https://giscus.app/)
+  repo: "dhruvhaldar/dhruvhaldar.github.io"
+  repo_id: "R_kgDOLQHoaA"
   category: Comments # name of the category under which discussions will be created
   category_id: # leave empty or specify your category_id (see https://giscus.app/)
   mapping: title # identify discussions by post title
-  strict: 1 # use strict identification mode
+  strict: 0 # use strict identification mode
   reactions_enabled: 1 # enable (1) or disable (0) emoji reactions
   input_position: bottom # whether to display input form below (bottom) or above (top) the comments
   theme: preferred_color_scheme # name of the color scheme (preferred works well with al-folio light/dark mode)
@@ -157,9 +157,9 @@ disqus_shortname: al-folio # put your disqus shortname
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
+# external_sources:
+#   - name: medium.com
+#     rss_url: https://medium.com/@al-folio/feed
 
 # -----------------------------------------------------------------------------
 # Collections
@@ -283,8 +283,8 @@ display_categories: ["blockquotes"] # these categories will be displayed on the 
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Haldar]
+  first_name: [Dhruv]
 
   style: apa
   locale: en
