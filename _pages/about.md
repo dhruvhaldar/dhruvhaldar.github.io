@@ -17,5 +17,4 @@ social: true # includes social icons at the bottom of the page
 
 Welcome aboard my digital domain! Prepare to embark on a thrilling journey through the essence of my professional life and the wonders of my work. Let's unlock the secrets of Computational Fluid Dynamics together! 🌟
 
-
-Please review my curriculum vitae located at _pages/cv.md.
+For recruiters, please review my [Curriculum vitae](https://dhruvhaldar.github.io/cv/).
