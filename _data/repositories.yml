@@ -2,8 +2,6 @@ github_users:
   - dhruvhaldar
 
 github_repos:
-  - dhruvhaldar/tax
-  - dhruvhaldar/Tensile_force_data
   - pyvista
   - pyvista/pymeshfix
   - Kitware/VTK
