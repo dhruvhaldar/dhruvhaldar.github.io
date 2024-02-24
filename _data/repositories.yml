@@ -4,7 +4,6 @@ github_users:
 github_repos:
   - dhruvhaldar/tax
   - dhruvhaldar/Tensile_force_data
-  - dhruvhaldar/NSE-BSE-F-O-Timeseries-Analysis-in-R
   - pyvista
   - pyvista/pymeshfix
   - Kitware/VTK
