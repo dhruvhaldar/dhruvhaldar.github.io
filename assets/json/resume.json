@@ -16,28 +16,6 @@
     "profiles": [
     ]
   },
-  "work": [
-    {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "People's Climate March",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
-    }
-  ],
   "education": [
     {
       "institution": "KTH Royal Institute of Technology, Stockholm, Sweden",
@@ -65,15 +43,6 @@
       "summary": "From Current Affairs to History, the quiz covered almost all the aspects crucial for both of the countries. Basically, it gave an overall representation of the past and the future relations between both of them . The quiz was divided into three rounds+1 bonus round, there were 5 teams with each of them having two members."
     }
   ],
-  "certificates": [
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
-    }
-  ],
   "publications": [
     {
       "name": "Implementation of Wing Ice Protection System in More Electric Aircraft Technologies",
@@ -89,21 +58,6 @@
       "author": "Emil Holmgren and Dhruv Haldar and Lina Bertling Tjernberg and Andreas Johansson",
       "releaseDate": "2022-09-04",
       "summary": "Authored by Emil Holmgren, this paper is about investigating the fuel consumption of passenger aircraft with conventional bleed-air driven Environmental Control System (ECS) and aircraft with equivalent electrical systems. A framework has been developed in MATLAB to run simulations under various conditions to study the passenger-scaling effect and impact of subsystem weight."
-    }
-  ],
-  "skills": [
-    {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
     }
   ],
   "languages": [

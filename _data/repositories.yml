@@ -2,7 +2,7 @@ github_users:
   - dhruvhaldar
 
 github_repos:
-  - pyvista
+  - pyvista/pyvista
   - pyvista/pymeshfix
   - Kitware/VTK
   - Kitware/ParaView
