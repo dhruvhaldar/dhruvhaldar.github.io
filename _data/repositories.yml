@@ -1,12 +1,12 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - dhruvhaldar
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - dhruvhaldar/tax
+  - dhruvhaldar/Tensile_force_data
+  - dhruvhaldar/NSE-BSE-F-O-Timeseries-Analysis-in-R
+  - pyvista
+  - pyvista/pymeshfix
+  - Kitware/VTK
+  - Kitware/ParaView
+  - Kitware/vtk-js
