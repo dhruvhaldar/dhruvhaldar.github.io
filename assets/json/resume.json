@@ -52,49 +52,20 @@
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "Venture Cup Sverige - Region Öst",
+      "date": "2019-12-13",
+      "awarder": "Flemingsberg Science",
+      "url": "https://openlabsthlm.se/wp-content/uploads/2020/01/Biking-in-Stockholm.-Report.pdf",
+      "summary": "Flemingsberg Science Award is for ideas that contribute to a better world. In addition to being named as one of Sweden’s top 20 best ideas, we received SEK 5000 prize money and an office in Flemingsberg Science innovation hub for three months."
+    },
+    {
+      "title": "French - German Quiz",
+      "date": "2016-02-23",
+      "awarder": "SRM University",
+      "summary": "From Current Affairs to History, the quiz covered almost all the aspects crucial for both of the countries. Basically, it gave an overall representation of the past and the future relations between both of them . The quiz was divided into three rounds+1 bonus round, there were 5 teams with each of them having two members."
     }
   ],
   "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
-    },
-    {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
     {
       "name": "Quantum Teleportation",
       "date": "2018-01-01",
