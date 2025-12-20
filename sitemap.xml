@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="stylemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
   <url>
-    <loc>http://dhruvhaldar.github.io/</loc>
+    <loc>https://dhruvhaldar.github.io/</loc>
   </url>
   <url>
-    <loc>http://dhruvhaldar.github.io/about</loc>
+    <loc>https://dhruvhaldar.github.io/about</loc>
   </url>
   <url>
-    <loc>http://dhruvhaldar.github.io/work</loc>
+    <loc>https://dhruvhaldar.github.io/work</loc>
   </url>
   <url>
-    <loc>http://dhruvhaldar.github.io/publications</loc>
+    <loc>https://dhruvhaldar.github.io/publications</loc>
   </url>
   <url>
     <loc>https://dhruvhaldar.vercel.app</loc>
