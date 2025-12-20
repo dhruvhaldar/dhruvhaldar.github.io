@@ -2,12 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; URL=https://dhruvhaldar.vercel.app/about">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhruv Haldar's Portfolio (With Projects and Publications)</title>
+    <title>Redirecting to Repositories</title>
+    <meta http-equiv="refresh" content="0; URL=https://dhruvhaldar.vercel.app/about">
     <link rel="canonical" href="https://dhruvhaldar.vercel.app/about">
+    <script>window.location.replace("https://dhruvhaldar.vercel.app/about");</script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fafafa;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: normal;
+        }
+        a {
+            color: #0051d8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #0051d8;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
-    <p>Redirecting to <a href="https://dhruvhaldar.vercel.app/about">https://dhruvhaldar.vercel.app/about</a></p>
+    <div class="container">
+        <div class="spinner" role="status" aria-label="Loading"></div>
+        <h1>Redirecting you to <a href="https://dhruvhaldar.vercel.app/about">About (Repositories)</a>...</h1>
+        <p><small>If you are not redirected automatically, please click the link above.</small></p>
+    </div>
 </body>
 </html>
