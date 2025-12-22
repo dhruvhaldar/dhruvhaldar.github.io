@@ -2,14 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Redirecting to Publications</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; connect-src https://dhruvhaldar.vercel.app; img-src 'self'; style-src 'unsafe-inline';">
     <meta http-equiv="refresh" content="0; URL=https://dhruvhaldar.vercel.app/publications">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
     <link rel="preconnect" href="https://dhruvhaldar.vercel.app">
     <script>window.location.replace("https://dhruvhaldar.vercel.app/publications");</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dhruv Haldar's Portfolio - Redirecting to Publications">
+    <meta name="robots" content="index, follow">
+    <title>Redirecting to Publications</title>
     <link rel="canonical" href="https://dhruvhaldar.vercel.app/publications">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #eee;
+            border-top: 3px solid #333;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .redirect-text {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .fallback-link {
+            font-size: 0.9rem;
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .fallback-link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <p>Redirecting to <a href="https://dhruvhaldar.vercel.app/publications">Publicationse</a>...</p>
+    <div class="container" role="status" aria-live="polite">
+        <div class="spinner" aria-hidden="true"></div>
+        <div class="redirect-text">Redirecting you to Publications...</div>
+        <a href="https://dhruvhaldar.vercel.app/publications" class="fallback-link">
+            Click here if you are not redirected automatically
+        </a>
+    </div>
 </body>
 </html>
