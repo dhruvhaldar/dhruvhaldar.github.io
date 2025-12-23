@@ -53,6 +53,37 @@
           .url:hover {
             text-decoration: underline;
           }
+
+          @media (prefers-color-scheme: dark) {
+            body {
+              background-color: #1a1a1a;
+              color: #e0e0e0;
+            }
+            h1 {
+              color: #4da3ff;
+            }
+            table {
+              background: #2d2d2d;
+              color: #e0e0e0;
+            }
+            th {
+              background: #333;
+              border-bottom-color: #444;
+              color: #fff;
+            }
+            td {
+              border-bottom-color: #444;
+            }
+            tr:hover {
+              background: #333;
+            }
+            .url-count {
+              color: #aaa;
+            }
+            .url {
+              color: #4da3ff;
+            }
+          }
         </style>
       </head>
       <body>

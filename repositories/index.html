@@ -48,6 +48,20 @@
         .fallback-link:hover {
             text-decoration: underline;
         }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1a1a1a;
+                color: #e0e0e0;
+            }
+            .spinner {
+                border-color: #333;
+                border-top-color: #e0e0e0;
+            }
+            .fallback-link {
+                color: #4da3ff;
+            }
+        }
     </style>
 </head>
 <body>
