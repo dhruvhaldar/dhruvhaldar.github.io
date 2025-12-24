@@ -5,7 +5,7 @@
   <xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes"/>
   
   <xsl:template match="/">
-    <html xmlns="http://www.w3.org/1999/xhtml">
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
       <head>
         <title>XML Sitemap</title>
         <!-- Security: Strict CSP to prevent XSS. 'unsafe-inline' is required for the XSLT's internal styles. -->
@@ -97,8 +97,8 @@
         </div>
         <table>
           <tr>
-            <th>URL</th>
-            <th>Path</th>
+            <th scope="col">URL</th>
+            <th scope="col">Path</th>
           </tr>
           <xsl:for-each select="sitemap:urlset/sitemap:url">
             <tr>
