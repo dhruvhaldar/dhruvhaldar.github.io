@@ -8,6 +8,10 @@
     <html xmlns="http://www.w3.org/1999/xhtml">
       <head>
         <title>XML Sitemap</title>
+        <!-- Security: Strict CSP to prevent XSS. 'unsafe-inline' is required for the XSLT's internal styles. -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';"/>
+        <!-- Security: Control referrer information to preserve privacy. -->
+        <meta name="referrer" content="strict-origin-when-cross-origin"/>
         <style type="text/css">
           body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
