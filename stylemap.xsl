@@ -9,7 +9,7 @@
       <head>
         <title>XML Sitemap</title>
         <!-- Security: Strict CSP to prevent XSS. -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-iIOAUMhcSH0ThiAwQROqGb8FFSdwCXFB/fGqD5ytydQ='; script-src 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';"/>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-CkHNRtk2ss0EzajtE4BI+mTylkxFlAd0EN24cz4sORE='; script-src 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';"/>
         <!-- Security: Control referrer information to preserve privacy. -->
         <meta name="referrer" content="strict-origin-when-cross-origin"/>
         <style type="text/css">
@@ -42,6 +42,7 @@
           td {
             padding: 0.75rem 1rem;
             border-bottom: 1px solid #dee2e6;
+            word-break: break-all;
           }
           tr:hover {
             background: #f8f9fa;
@@ -56,6 +57,11 @@
           }
           .url:hover {
             text-decoration: underline;
+          }
+          .url:focus {
+            outline: 2px solid #1a73e8;
+            outline-offset: 2px;
+            border-radius: 2px;
           }
 
           @media (prefers-color-scheme: dark) {
@@ -87,6 +93,9 @@
             .url {
               color: #4da3ff;
             }
+            .url:focus {
+              outline-color: #4da3ff;
+            }
           }
         </style>
       </head>
@@ -96,6 +105,7 @@
           Number of URLs: <xsl:value-of select="count(sitemap:urlset/sitemap:url)"/>
         </div>
         <table>
+          <caption>Sitemap URLs</caption>
           <tr>
             <th scope="col">URL</th>
             <th scope="col">Path</th>
