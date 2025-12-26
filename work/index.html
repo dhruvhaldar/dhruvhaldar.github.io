@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-VYw7SvKcUVHCYl1riokuzsRe9lAAfUp/odWHQyYog+M='; style-src 'sha256-onqKpCvxmg4ErKoTsaIGBiXv2mX0lu8FHS9ZEnVhywE='; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-VYw7SvKcUVHCYl1riokuzsRe9lAAfUp/odWHQyYog+M='; style-src 'sha256-LTZDQmKdLI2lpIhdKzsFaiCfMdzGuZ+00AdRu/a3ACA='; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';">
     <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
     <title>Redirecting to Work</title>
     <meta http-equiv="refresh" content="0; URL=https://dhruvhaldar.vercel.app/work">
@@ -53,6 +53,11 @@
         .fallback-link:hover {
             text-decoration: underline;
         }
+        .fallback-link:focus {
+            outline: 2px solid #333;
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
 
         @media (prefers-color-scheme: dark) {
             body {
@@ -65,6 +70,9 @@
             }
             .fallback-link {
                 color: #4da3ff;
+            }
+            .fallback-link:focus {
+                outline-color: #4da3ff;
             }
         }
     </style>
