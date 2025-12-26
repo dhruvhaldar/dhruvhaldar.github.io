@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-3YOMVgdVrld/0OxE+336M7ETthiP/VrLPoS0HBPlq2I='; style-src 'sha256-onqKpCvxmg4ErKoTsaIGBiXv2mX0lu8FHS9ZEnVhywE='; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-3YOMVgdVrld/0OxE+336M7ETthiP/VrLPoS0HBPlq2I='; style-src 'sha256-hWmdNztgfZIgiVxu4KzGY3E1E5A9oO6MWerSOc/o2KY='; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';">
     <meta http-equiv="refresh" content="0; URL=https://dhruvhaldar.vercel.app/">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
     <link rel="preconnect" href="https://dhruvhaldar.vercel.app">
     <link rel="dns-prefetch" href="https://dhruvhaldar.vercel.app">
     <script>window.location.replace("https://dhruvhaldar.vercel.app/");</script>
@@ -55,6 +54,11 @@
         .fallback-link:hover {
             text-decoration: underline;
         }
+        .fallback-link:focus {
+            outline: 2px solid #0066cc;
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
 
         @media (prefers-color-scheme: dark) {
             body {
@@ -68,6 +72,9 @@
             .fallback-link {
                 color: #4da3ff;
             }
+            .fallback-link:focus {
+                outline-color: #4da3ff;
+            }
         }
     </style>
 </head>
@@ -75,7 +82,7 @@
     <div class="container" role="status" aria-live="polite">
         <div class="spinner" aria-hidden="true"></div>
         <div class="redirect-text">Redirecting you to the new portfolio...</div>
-        <a href="https://dhruvhaldar.vercel.app/" class="fallback-link">
+        <a href="https://dhruvhaldar.vercel.app/" class="fallback-link" title="Manually redirect to Dhruv Haldar's Portfolio">
             Click here if you are not redirected automatically
         </a>
     </div>
