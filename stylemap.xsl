@@ -8,6 +8,7 @@
     <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
       <head>
         <title>XML Sitemap</title>
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
         <!-- Security: Strict CSP to prevent XSS. -->
         <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-CkHNRtk2ss0EzajtE4BI+mTylkxFlAd0EN24cz4sORE='; script-src 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';"/>
         <!-- Security: Control referrer information to preserve privacy. -->
