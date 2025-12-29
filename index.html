@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <meta content="default-src 'none'; script-src 'sha256-3YOMVgdVrld/0OxE+336M7ETthiP/VrLPoS0HBPlq2I='; style-src 'sha256-NP9Iko/xsOo928dshlxQdWNF56h/Fz9oPKfluh2a8Ok='; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';" http-equiv="Content-Security-Policy"/>
+    <meta content="default-src 'none'; script-src 'sha256-3YOMVgdVrld/0OxE+336M7ETthiP/VrLPoS0HBPlq2I='; style-src 'sha256-2XkTbHtPolzFiD/+8VR2V8khy8zcpaYbjKwuF1JAz98='; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';" http-equiv="Content-Security-Policy"/>
     <meta content="strict-origin-when-cross-origin" name="referrer"/>
     <link href="https://dhruvhaldar.vercel.app" rel="preconnect"/>
     <link href="https://dhruvhaldar.vercel.app" rel="dns-prefetch"/>
@@ -59,6 +59,12 @@
             outline: 2px solid #333;
             outline-offset: 2px;
             border-radius: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .spinner {
+                animation: none;
+            }
         }
 
         @media (prefers-color-scheme: dark) {
