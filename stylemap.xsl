@@ -8,9 +8,10 @@
     <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
       <head>
         <title>XML Sitemap</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="icon" href="data:;base64,iVBORw0KGgo="/>
         <!-- Security: Strict CSP to prevent XSS. -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-CkHNRtk2ss0EzajtE4BI+mTylkxFlAd0EN24cz4sORE='; script-src 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';"/>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-iUCG83u7V9Uf2eXYB9IcsdVao+tK6/6HkKqhncrC8cs='; script-src 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';"/>
         <!-- Security: Control referrer information to preserve privacy. -->
         <meta name="referrer" content="strict-origin-when-cross-origin"/>
         <style type="text/css">
@@ -47,6 +48,17 @@
           }
           tr:hover {
             background: #f8f9fa;
+          }
+          .back-link {
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+          }
+          .back-link:hover {
+            color: #1a73e8;
+            text-decoration: underline;
           }
           .url-count {
             color: #666;
@@ -88,6 +100,12 @@
             tr:hover {
               background: #333;
             }
+            .back-link {
+              color: #aaa;
+            }
+            .back-link:hover {
+              color: #4da3ff;
+            }
             .url-count {
               color: #aaa;
             }
@@ -102,6 +120,7 @@
       </head>
       <body>
         <h1>XML Sitemap</h1>
+        <a href="https://dhruvhaldar.vercel.app/" class="back-link">&#8592; Back to Portfolio</a>
         <div class="url-count">
           Number of URLs: <xsl:value-of select="count(sitemap:urlset/sitemap:url)"/>
         </div>
