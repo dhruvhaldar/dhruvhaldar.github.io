@@ -9,8 +9,9 @@
       <head>
         <title>XML Sitemap</title>
         <link rel="icon" href="data:;base64,iVBORw0KGgo="/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
         <!-- Security: Strict CSP to prevent XSS. -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-CkHNRtk2ss0EzajtE4BI+mTylkxFlAd0EN24cz4sORE='; script-src 'none'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';"/>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-FVoYWV7uGH3cRXhHQZlHusn5OtxRyaKc4Q2zNNWkhT4='; script-src 'none'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';"/>
         <!-- Security: Control referrer information to preserve privacy. -->
         <meta name="referrer" content="strict-origin-when-cross-origin"/>
                 <link href="https://dhruvhaldar.vercel.app" rel="preconnect"/>
@@ -66,6 +67,23 @@
             outline-offset: 2px;
             border-radius: 2px;
           }
+          .nav-header {
+            margin-bottom: 1rem;
+          }
+          .back-link {
+            color: #666;
+            text-decoration: none;
+            display: inline-block;
+          }
+          .back-link:hover {
+            text-decoration: underline;
+            color: #1a73e8;
+          }
+          .back-link:focus {
+            outline: 2px solid #1a73e8;
+            outline-offset: 2px;
+            border-radius: 2px;
+          }
 
           @media (prefers-color-scheme: dark) {
             body {
@@ -99,10 +117,22 @@
             .url:focus {
               outline-color: #4da3ff;
             }
+            .back-link {
+              color: #aaa;
+            }
+            .back-link:hover {
+              color: #4da3ff;
+            }
+            .back-link:focus {
+              outline-color: #4da3ff;
+            }
           }
         </style>
       </head>
       <body>
+        <div class="nav-header">
+          <a class="back-link" href="https://dhruvhaldar.vercel.app">← Back to Portfolio</a>
+        </div>
         <h1>XML Sitemap</h1>
         <div class="url-count">
           Number of URLs: <xsl:value-of select="count(sitemap:urlset/sitemap:url)"/>
