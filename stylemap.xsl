@@ -8,9 +8,10 @@
     <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
       <head>
         <title>XML Sitemap</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
         <link rel="icon" href="data:;base64,iVBORw0KGgo="/>
         <!-- Security: Strict CSP to prevent XSS. -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-CkHNRtk2ss0EzajtE4BI+mTylkxFlAd0EN24cz4sORE='; script-src 'none'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';"/>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-kzNo/DzEZFkMvvzMOh5ptHsR9AelbnTEG659xsI9QU8='; script-src 'none'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';"/>
         <!-- Security: Control referrer information to preserve privacy. -->
         <meta name="referrer" content="strict-origin-when-cross-origin"/>
                 <link href="https://dhruvhaldar.vercel.app" rel="preconnect"/>
@@ -66,6 +67,24 @@
             outline-offset: 2px;
             border-radius: 2px;
           }
+          .nav-header {
+            margin-bottom: 1rem;
+          }
+          .back-link {
+            display: inline-block;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+          }
+          .back-link:hover {
+            text-decoration: underline;
+            color: #1a73e8;
+          }
+          .back-link:focus {
+            outline: 2px solid #1a73e8;
+            outline-offset: 2px;
+            border-radius: 2px;
+          }
 
           @media (prefers-color-scheme: dark) {
             body {
@@ -74,6 +93,15 @@
             }
             h1 {
               color: #4da3ff;
+            }
+            .back-link {
+              color: #aaa;
+            }
+            .back-link:hover {
+              color: #4da3ff;
+            }
+            .back-link:focus {
+              outline-color: #4da3ff;
             }
             table {
               background: #2d2d2d;
@@ -103,6 +131,9 @@
         </style>
       </head>
       <body>
+        <div class="nav-header">
+          <a class="back-link" href="https://dhruvhaldar.vercel.app">← Back to Portfolio</a>
+        </div>
         <h1>XML Sitemap</h1>
         <div class="url-count">
           Number of URLs: <xsl:value-of select="count(sitemap:urlset/sitemap:url)"/>
