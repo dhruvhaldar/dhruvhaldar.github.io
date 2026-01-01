@@ -3,6 +3,3 @@ Allow: /
 
 # Main sitemap
 Sitemap: https://dhruvhaldar.github.io/sitemap.xml
-
-# Crawl-delay for all bots
-Crawl-delay: 10s
