@@ -7,10 +7,12 @@
   <xsl:template match="/">
     <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
       <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>XML Sitemap</title>
         <link rel="icon" href="data:;base64,iVBORw0KGgo="/>
         <!-- Security: Strict CSP to prevent XSS. -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-CkHNRtk2ss0EzajtE4BI+mTylkxFlAd0EN24cz4sORE='; script-src 'none'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';"/>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-b+cE3McmHJKgpNMv+7LT5D28i1PciAHXfcTUNSfFgws='; script-src 'none'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';"/>
         <!-- Security: Control referrer information to preserve privacy. -->
         <meta name="referrer" content="strict-origin-when-cross-origin"/>
                 <link href="https://dhruvhaldar.vercel.app" rel="preconnect"/>
@@ -29,6 +31,7 @@
             margin-bottom: 1rem;
           }
           table {
+            table-layout: fixed;
             border-collapse: collapse;
             width: 100%;
             background: white;
@@ -76,6 +79,7 @@
               color: #4da3ff;
             }
             table {
+            table-layout: fixed;
               background: #2d2d2d;
               color: #e0e0e0;
             }
@@ -100,7 +104,10 @@
               outline-color: #4da3ff;
             }
           }
-        </style>
+
+          th:nth-child(1) { width: 75%; }
+          th:nth-child(2) { width: 25%; }
+</style>
       </head>
       <body>
         <h1>XML Sitemap</h1>
