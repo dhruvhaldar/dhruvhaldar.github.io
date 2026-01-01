@@ -10,10 +10,10 @@
         <title>XML Sitemap</title>
         <link rel="icon" href="data:;base64,iVBORw0KGgo="/>
         <!-- Security: Strict CSP to prevent XSS. -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-CkHNRtk2ss0EzajtE4BI+mTylkxFlAd0EN24cz4sORE='; script-src 'none'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';"/>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-PMDl0AaALBp+6SBs4dgPt3ISFRliLa/jwQTPUtELgso='; script-src 'none'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';"/>
         <!-- Security: Control referrer information to preserve privacy. -->
         <meta name="referrer" content="strict-origin-when-cross-origin"/>
-                <link href="https://dhruvhaldar.vercel.app" rel="preconnect"/>
+        <link href="https://dhruvhaldar.vercel.app" rel="preconnect"/>
         <link href="https://dhruvhaldar.vercel.app" rel="dns-prefetch"/>
         <style type="text/css">
           body {
@@ -67,6 +67,27 @@
             border-radius: 2px;
           }
 
+          .badge {
+            display: inline-block;
+            padding: 0.25em 0.5em;
+            font-size: 0.75em;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 0.25rem;
+            margin-right: 0.5rem;
+          }
+          .badge-new {
+            color: #155724;
+            background-color: #d4edda;
+          }
+          .badge-legacy {
+            color: #383d41;
+            background-color: #e2e3e5;
+          }
+
           @media (prefers-color-scheme: dark) {
             body {
               background-color: #1a1a1a;
@@ -99,6 +120,15 @@
             .url:focus {
               outline-color: #4da3ff;
             }
+
+            .badge-new {
+              color: #d4edda;
+              background-color: #155724;
+            }
+            .badge-legacy {
+              color: #e2e3e5;
+              background-color: #383d41;
+            }
           }
         </style>
       </head>
@@ -116,12 +146,30 @@
           <xsl:for-each select="sitemap:urlset/sitemap:url">
             <tr>
               <td>
+                <xsl:choose>
+                  <xsl:when test="contains(sitemap:loc, 'dhruvhaldar.vercel.app')">
+                    <span class="badge badge-new">New</span>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <span class="badge badge-legacy">Legacy</span>
+                  </xsl:otherwise>
+                </xsl:choose>
                 <a class="url" href="{sitemap:loc}">
                   <xsl:value-of select="sitemap:loc"/>
                 </a>
               </td>
               <td>
-                <xsl:value-of select="substring-after(sitemap:loc, 'dhruvhaldar.vercel.app')"/>
+                <xsl:choose>
+                  <xsl:when test="contains(sitemap:loc, 'dhruvhaldar.vercel.app')">
+                    <xsl:value-of select="substring-after(sitemap:loc, 'dhruvhaldar.vercel.app')"/>
+                  </xsl:when>
+                  <xsl:when test="contains(sitemap:loc, 'dhruvhaldar.github.io')">
+                    <xsl:value-of select="substring-after(sitemap:loc, 'dhruvhaldar.github.io')"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:value-of select="sitemap:loc"/>
+                  </xsl:otherwise>
+                </xsl:choose>
               </td>
             </tr>
           </xsl:for-each>
