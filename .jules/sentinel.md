@@ -8,3 +8,7 @@
 **Vulnerability:** Inconsistent Referrer-Policy across subpages and invalid usage of Permissions-Policy in meta tags.
 **Learning:** The `Permissions-Policy` header is not supported in HTML `<meta>` tags (unlike CSP), making its presence invalid and useless. Conversely, `Referrer-Policy` IS supported in meta tags and is critical for privacy in redirect scenarios.
 **Prevention:** Ensure `<meta name="referrer" content="strict-origin-when-cross-origin">` is present on all pages. Remove any `<meta http-equiv="Permissions-Policy">`. Use automated checks (BeautifulSoup) to enforce this consistency.
+## 2025-02-21 - CSP Hardening: base-uri and form-action
+**Vulnerability:** Use of `base-uri 'self'` and `form-action 'self'` in purely static redirect pages.
+**Learning:** Static redirect pages do not use `<base>` tags or forms. Allowing `'self'` unnecessarily expands the attack surface.
+**Prevention:** Explicitly set `base-uri` and `form-action` to `'none'` in the Content Security Policy for all static pages to adhere to the principle of least privilege.
