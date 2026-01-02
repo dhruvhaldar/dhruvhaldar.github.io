@@ -11,7 +11,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>XML Sitemap</title>
         <link rel="icon" href="data:;base64,iVBORw0KGgo="/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- Security: Strict CSP to prevent XSS. -->
         <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-CkHNRtk2ss0EzajtE4BI+mTylkxFlAd0EN24cz4sORE='; script-src 'none'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none';"/>
         <!-- Security: Control referrer information to preserve privacy. -->
