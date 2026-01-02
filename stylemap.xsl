@@ -13,7 +13,7 @@
         <link rel="icon" href="data:;base64,iVBORw0KGgo="/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- Security: Strict CSP to prevent XSS. -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-CkHNRtk2ss0EzajtE4BI+mTylkxFlAd0EN24cz4sORE='; script-src 'none'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none';"/>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-2YQVOry2G/gawvGg72ZmqdnMwftyPVWYbBVABwQW4QE='; script-src 'none'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none';"/>
         <!-- Security: Control referrer information to preserve privacy. -->
         <meta name="referrer" content="strict-origin-when-cross-origin"/>
         <link href="https://dhruvhaldar.vercel.app" rel="preconnect"/>
@@ -25,6 +25,24 @@
             max-width: 75rem;
             margin: 0 auto;
             padding: 2rem;
+          }
+          .badge {
+            display: inline-block;
+            padding: 0.25em 0.5em;
+            font-size: 0.75em;
+            font-weight: 700;
+            border-radius: 4px;
+            margin-right: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+          }
+          .badge-legacy {
+            background-color: #e2e3e5;
+            color: #383d41;
+          }
+          .badge-new {
+            background-color: #d4edda;
+            color: #155724;
           }
           h1 {
             color: #1a73e8;
@@ -102,6 +120,14 @@
             .url:focus {
               outline-color: #4da3ff;
             }
+            .badge-legacy {
+              background-color: #4a4a4a;
+              color: #e0e0e0;
+            }
+            .badge-new {
+              background-color: #1e4620;
+              color: #d4edda;
+            }
           }
         </style>
       </head>
@@ -120,6 +146,14 @@
             <tr>
               <td>
                 <xsl:choose>
+                  <xsl:when test="contains(sitemap:loc, 'dhruvhaldar.vercel.app')">
+                    <span class="badge badge-new">New</span>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <span class="badge badge-legacy">Legacy</span>
+                  </xsl:otherwise>
+                </xsl:choose>
+                <xsl:choose>
                   <xsl:when test="starts-with(sitemap:loc, 'http')">
                     <a class="url" href="{sitemap:loc}">
                       <xsl:value-of select="sitemap:loc"/>
@@ -131,7 +165,17 @@
                 </xsl:choose>
               </td>
               <td>
-                <xsl:value-of select="substring-after(sitemap:loc, 'dhruvhaldar.vercel.app')"/>
+                <xsl:choose>
+                  <xsl:when test="contains(sitemap:loc, 'dhruvhaldar.vercel.app')">
+                    <xsl:value-of select="substring-after(sitemap:loc, 'dhruvhaldar.vercel.app')"/>
+                  </xsl:when>
+                  <xsl:when test="contains(sitemap:loc, 'dhruvhaldar.github.io')">
+                    <xsl:value-of select="substring-after(sitemap:loc, 'dhruvhaldar.github.io')"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:value-of select="sitemap:loc"/>
+                  </xsl:otherwise>
+                </xsl:choose>
               </td>
             </tr>
           </xsl:for-each>
