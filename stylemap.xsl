@@ -119,9 +119,16 @@
           <xsl:for-each select="sitemap:urlset/sitemap:url">
             <tr>
               <td>
-                <a class="url" href="{sitemap:loc}">
-                  <xsl:value-of select="sitemap:loc"/>
-                </a>
+                <xsl:choose>
+                  <xsl:when test="starts-with(sitemap:loc, 'http')">
+                    <a class="url" href="{sitemap:loc}">
+                      <xsl:value-of select="sitemap:loc"/>
+                    </a>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:value-of select="sitemap:loc"/>
+                  </xsl:otherwise>
+                </xsl:choose>
               </td>
               <td>
                 <xsl:value-of select="substring-after(sitemap:loc, 'dhruvhaldar.vercel.app')"/>
