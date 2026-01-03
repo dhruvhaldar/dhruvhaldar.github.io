@@ -12,7 +12,7 @@
         <title>XML Sitemap</title>
         <link rel="icon" href="data:;base64,iVBORw0KGgo="/>
         <!-- Security: Strict CSP to prevent XSS. -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; object-src 'none'; style-src 'sha256-CkHNRtk2ss0EzajtE4BI+mTylkxFlAd0EN24cz4sORE='; script-src 'none'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none';"/>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; object-src 'none'; style-src 'sha256-JOeZvwzLtHE9g9gJiOmKDPLsjWQqnnhxrTiv2AWgvkk='; script-src 'none'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none';"/>
         <!-- Security: Control referrer information to preserve privacy. -->
         <meta name="referrer" content="strict-origin-when-cross-origin"/>
         <link href="https://dhruvhaldar.vercel.app" rel="preconnect"/>
@@ -36,6 +36,7 @@
             background: white;
             margin: 2rem 0;
             box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            table-layout: fixed;
           }
           th {
             background: #f8f9fa;
@@ -67,6 +68,35 @@
             outline: 2px solid #1a73e8;
             outline-offset: 2px;
             border-radius: 2px;
+          }
+          .badge {
+            display: inline-block;
+            padding: 0.25em 0.4em;
+            font-size: 75%;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 0.25rem;
+            margin-right: 0.5rem;
+          }
+          .badge-new {
+            color: #fff;
+            background-color: #198754;
+          }
+          .badge-legacy {
+            color: #212529;
+            background-color: #ffc107;
+          }
+          /* Column widths */
+          th:first-child { width: 75%; }
+          th:last-child { width: 25%; }
+
+          @media (prefers-reduced-motion: reduce) {
+              .spinner {
+                  animation: none;
+              }
           }
 
           @media (prefers-color-scheme: dark) {
@@ -101,6 +131,13 @@
             .url:focus {
               outline-color: #4da3ff;
             }
+            .badge-legacy {
+              color: #000;
+              background-color: #ffc107;
+            }
+            .badge-new {
+              background-color: #146c43;
+            }
           }
         </style>
       </head>
@@ -119,6 +156,16 @@
             <tr>
               <td>
                 <xsl:choose>
+                   <xsl:when test="contains(sitemap:loc, 'dhruvhaldar.vercel.app')">
+                     <span class="badge badge-new">New</span>
+                     <xsl:text> </xsl:text>
+                   </xsl:when>
+                   <xsl:when test="contains(sitemap:loc, 'dhruvhaldar.github.io')">
+                     <span class="badge badge-legacy">Legacy</span>
+                     <xsl:text> </xsl:text>
+                   </xsl:when>
+                </xsl:choose>
+                <xsl:choose>
                   <xsl:when test="starts-with(sitemap:loc, 'http')">
                     <a class="url" href="{sitemap:loc}">
                       <xsl:value-of select="sitemap:loc"/>
@@ -130,7 +177,17 @@
                 </xsl:choose>
               </td>
               <td>
-                <xsl:value-of select="substring-after(sitemap:loc, 'dhruvhaldar.vercel.app')"/>
+                <xsl:choose>
+                  <xsl:when test="contains(sitemap:loc, 'dhruvhaldar.vercel.app')">
+                    <xsl:value-of select="substring-after(sitemap:loc, 'dhruvhaldar.vercel.app')"/>
+                  </xsl:when>
+                  <xsl:when test="contains(sitemap:loc, 'dhruvhaldar.github.io')">
+                    <xsl:value-of select="substring-after(sitemap:loc, 'dhruvhaldar.github.io')"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                     <xsl:value-of select="sitemap:loc"/>
+                  </xsl:otherwise>
+                </xsl:choose>
               </td>
             </tr>
           </xsl:for-each>
